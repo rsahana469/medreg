@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/android.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <title>Global Regulatory</title>
+
+    <style>
+        .design{
+            width: 20%;
+            
+        }
+    </style>
+</head>
+
+<body >
+
+
+    <div id="android_header">
+        <div id="android_header_left">
+
+             <div id="mySidepanel" class="sidepanel">
+             
+                <div class="sidepanel-content">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <img src="media/logo_new.png">
+                    <button onclick="openhome()">About</button>
+                    <button onclick="opennews()">News</button>
+                    <button onclick="openfeedback()">Feedback</button>
+                    <button onclick="opencontact()">Contact Us</button>
+                    <p>copyright @ 2024</p>
+                    
+                </div>
+             </div>
+
+           <button class="openbtn" id="androidbtn" onclick="openNav()">☰</button>
+           
+           
+        </div>
+        	
+       
+    </div>
+
+     <div id="android_con">
+        <p>Under Developemnt</p>
+     </div>
+
+    <div class='container' id="container">
+        <div class='loader'>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--text'></div>
+        </div>
+      </div>
+
+    <div class="home_master" id="home_master" >
+
+   
+
+    <div class="header">
+        <div class="logo">
+            <img src="media/logo_new.png" id="logo">
+        </div>
+
+        <div class="navbar">
+            <button onclick="openhome()" id="abt_btn">About</button>
+            <button onclick="opennews()">News</button>
+            <button onclick="openfeedback()">Feedback</button>
+            <button onclick="opencontact()" id="contact_btn">Contact Us</button>
+           
+            <select  id="select_page"  class="operator design" onchange="callcountry()"> 
+              
+            </select>  
+            <script type="text/javascript">
+                $(document).ready(function () {
+              //change selectboxes to selectize mode to be searchable
+                 $("#select_page").select2();
+              });
+              </script>
+        </div>
+
+    </div>
+
+    <div id="home_con">
+        <div class="company_heading">
+            <h2>Medical Device</h2>
+            <h2>Global Regulatory Requirements</h2>
+            <p><sup><i class="fa-solid fa-quote-left quotes"></sup></i> Simplify Your Regulatory Journey Across International Markets <sup> <i class="fa-solid fa-quote-right quotes"></i></sup></p>
+
+        </div>
+       
+
+        <div id="about_left" style="display: none;">
+            <img src="media/12.png" id="mission_image">
+        </div>
+
+        <div id="about_right">
+            <p>  Our mission is to facilitate global market access for medical 
+                device manufacturers by offering a user-friendly interface that navigates 
+                through country-specific regulatory requirements, 
+                ultimately saving precious time and costs. 
+            </p>
+            
+           
+        </div>
+    </div>
+
+
+    </div>
+
+  
+    <div class="secondary_header"  id="secondary_header"style="display: none;">
+        <div class="logo">
+            <img src="media/logo_new.png" id="logo">
+        </div>
+
+        <div class="navbar">
+            <button onclick="openhome()" id="abt_btn">About</button>
+            <button onclick="opennews()">News</button>
+            <button onclick="openfeedback()">Feedback</button>
+            <button onclick="opencontact()" id="contact_btn">Contact Us</button>
+           
+            <select  id="select_page_s"  style="width: 200px;" class="operator design" onchange="callcountry_s()"> 
+              
+            </select>  
+            <script type="text/javascript">
+                $(document).ready(function () {
+              //change selectboxes to selectize mode to be searchable
+                 $("select").select2();
+              });
+              </script>
+           
+        </div>
+
+    </div>
+
+
+    <div class="regions" id="regions" style="display:'none';">
+
+        <div class="region_heading">
+            <p>Global Regions</p>
+        </div>
+
+        <div class="upper">
+
+            
+            <div class="africa" onclick="openafrica()" id="global-region">
+                <P>Africa</P>
+            
+            </div>
+
+            <div class="asia"  onclick="openasia()" id="global-region">
+                <P>Asia Pacific</P>
+                
+            </div> 
+            <div class="america" onclick="openamerica()" id="global-region">
+                <P>America</P>
+        
+            </div> 
+         </div>
+        
+        <div class="belo">
+
+        
+            <div class="europe"  onclick="openeurope()" id="global-region">
+                <P>Europe</P>
+                
+                
+            </div>
+            <div class="Unregulated_Countries"    onclick="openug()" id="global-region">
+                <P> Low Regulated and
+                    Unregulated Countries</P>
+        
+            </div> 
+            <div class="Global_Organisations" onclick="opengo()" id="global-region">
+                <P>Global Organizations </P>
+                
+            </div>
+        </div>
+
+
+    
+        
+    </div>
+
+
+ 
+
+    <div class="home_third" id="home_third">
+        <div class="challenges">
+            <div class="c1">
+                <img src="media/c1.png"> 
+
+            </div>
+            
+
+
+        </div>
+        
+        <div class="solutions">
+            <div class="c1">
+                <img src="media/c2.png"> 
+
+            </div>
+           
+
+
+        </div>
+
+        <div class="advantages">
+            <div class="c1">
+                <img src="media/c3.png"> 
+
+            </div>
+            
+
+
+        </div>
+
+
+    </div>
+
+  
+
+    <div id="about_con">
+        
+    
+
+
+        <div id="about_left">
+                <img src="media/3.png" id="mission_image">
+        </div>
+
+        <div id="about_right">
+            <h2>MISSION</h2>
+            <p> <i class="fa-solid fa-quote-left quotes"></i> Our mission is to facilitate global market access for medical 
+                device manufacturers by offering a user-friendly interface that navigates 
+                through country-specific regulations, standards, and registration processes, 
+                ultimately saving time and costs associated with regulatory compliance. <i class="fa-solid fa-quote-right quotes"></i>
+            </p>
+            <hr>
+            <h2>VISION</h2>
+            <p> <i class="fa-solid fa-quote-left quotes"></i>To be the leading platform providing streamlined access to global regulatory
+                 information, empowering medical device manufacturers worldwide. <i class="fa-solid fa-quote-right quotes"></i>
+            </p>
+        </div>
+
+    </div>
+
+    <div id="news_con">
+        <p>No News Yet To Display!</p>
+    </div>
+
+
+    <div id="contact_con">
+        <div id="contact_left">
+            <div id="contact_form">
+                <br>
+                <div class="andorid_heading_con">
+                    <h2>Contact Us</h2>
+                </div>
+               
+                <div class="input-wrapper">
+                    <label for="first">Name<sup><span class="asterisk_input">  </span></sup> </label>
+                    <input type="name">
+                        
+                </div>
+                <div class="input-wrapper">
+                    <label for="first">Email <sup><span class="asterisk_input">  </span></sup> </label>
+                    <input type="email" id="email_data">
+                </div>
+                <div class="input-wrapper">
+                    <label for="first">Contact </label>
+                    <input type="number"  id="contact_data">
+                </div>
+                <div class="input-wrapper">
+                    <label for="first">Company/Organisation Name</sup> </label>
+                    <input type="text"  id="company_data">
+                </div>
+                <div class="input-wrapper">
+                    <label for="first">How can we help you? <sup><span class="asterisk_input">  </span></sup> </label>
+                    <textarea  id="help_data"></textarea>
+                </div>
+                <button onclick="submitcontact()">Submit</button>
+            </div>
+        </div>
+
+        <div id="contact_right">
+            <img src="media/contact_back.png" >
+           
+        </div>
+    </div>
+
+
+
+    <div id="feedback_con" >
+        <div id="contact_left">
+            <div class="android_heading_con" style="display: none;">
+                <h2>Contact Us</h2>
+            </div>
+            
+            <div id="contact_form">
+                <br>
+                <div class="andorid_heading_con">
+                    <h2>Feedback</h2>
+                </div>
+                <div class="input-wrapper">
+                    <label for="first">Name <sup><span class="asterisk_input">  </span></sup></label>
+                    <input type="name" id="feedback_name">
+                </div>
+                <div class="input-wrapper">
+                    <label for="first">Email </label>
+                    <input type="email" id="feedback_email">
+                </div>
+                <div class="input-wrapper">
+                    <label for="first">Phone </label>
+                    <input type="number" id="feedback_contact">
+                </div>
+                <div class="input-wrapper">
+                    <label for="first">Country Name <sup><span class="asterisk_input">  </span></sup></label>
+                   <input list="feedback_country" id="feedback_country_data" >
+                   <datalist id="feedback_country">
+                   </datalist>
+                    
+                </div>
+                <div class="input-wrapper" >
+                    <label for="first">Specify Issue <sup><span class="asterisk_input">  </span></sup></label>
+
+                    <input list=""  >
+                    <datalist id="">
+                    </datalist>
+
+
+                </div>
+                <div class="input-wrapper"  >
+                    <label for="first">Feedback Details<sup><span class="asterisk_input">  </span></sup></label>
+                    <input type="text" id="feedback_details">
+                </div>
+                <button onclick="submitfeedback()">Submit</button>
+            </div>
+        </div>
+
+        <div id="feedback_right">
+            <img src="media/feed_back.png" id="contact_inner">
+           
+        </div>
+    </div>
+
+    <div id="myModal" class="modal" >
+        <!-- Modal content -->
+        <div class="modal-content" id="android_content">
+            <div class="secondary_heading">
+               <select id="select_page1" style="width:200px;" class="operator" onchange="callcountry1()"> 
+            </select>  
+            <script type="text/javascript">
+                $(document).ready(function () {
+              //change selectboxes to selectize mode to be searchable
+                 $("#select_page1").select2();
+              });
+              </script>
+                <span  id="home_btn" onclick="closeeurope()">&times;</span>
+            </div>
+
+            <div class="american_content">
+                <div class="europe_left">
+                    <h2>European Union Countries</h2>
+                    
+                    <div class="countries">
+                
+                        <div id="global-region-name" onclick="displayinformation('Austria')">
+                            <P> Austria</P>
+                            <img id="flag" src="media/austria.png">
+                        </div>
+        
+                    
+                    
+                        <div  id="global-region-name" onclick="displayinformation('Belgium')">
+                            <P> Belgium</P>
+                            <img id="flag" src="media/belgium.png"> 
+                        </div>
+                    
+                        <div id="global-region-name" onclick="displayinformation('Bulgaria')">
+                            <P> Bulgaria</P>
+                            <img id="flag" src="media/bulgaria.png">  
+                        </div>
+
+                        <div id="global-region-name" onclick="displayinformation('croatia')">
+                            <P> Croatia</P>
+                            <img id="flag" src="media/croatia.png">         
+                        </div>
+                        <div  id="global-region-name" onclick="displayinformation('cyprus')">
+                            <P> Cyprus</P>
+                            <img id="flag" src="media/cyprus.png">             
+                        </div>
+
+
+                        <div id="global-region-name" onclick="displayinformation('Czechia')">
+                            <P> Czechia</P>
+                            <img id="flag" src="media/Czech Republic.png">
+                        </div>
+
+                    
+
+                        <div  id="global-region-name" onclick="displayinformation('Denmark')">
+                            <P> Denmark</P>
+                            <img id="flag" src="media/denmark.png">
+                        </div>
+
+                        <div id="global-region-name" onclick="displayinformation('Estonia')">
+                            <P> Estonia</P>
+                            <img id="flag" src="media/Estonia.png">
+                        </div>
+
+                        <div id="global-region-name" onclick="displayinformation('EuropeanUnion')">
+                            <P> EU</P>
+                            <img id="flag" src="media/EuropeanUnion.png">  
+                        </div>
+
+                        <div id="global-region-name" onclick="displayinformation('Finland')">
+                            <P> Finland</P>
+                            <img id="flag" src="media/Finland.png" >
+                        </div>
+
+                        <div id="global-region-name" onclick="displayinformation('France')">
+                            <P> France</P>
+                            <img id="flag" src="media/France.png">
+                        </div>
+
+                        <div  id="global-region-name" onclick="displayinformation('Germany')">
+                            <P> Germany</P>
+                            <img id="flag" src="media/Germany.png" >
+                        </div>
+        
+                
+
+                        <div  id="global-region-name"  onclick="displayinformation('Greece')">
+                            <P> Greece</P>
+                            <img id="flag" src="media/Greece.png">
+                        </div>
+
+                        <div  id="global-region-name" onclick="displayinformation('Hungary')">
+                            <P> Hungary</P>
+                            <img id="flag" src="media/Hungary.png">
+                        </div>
+                        <div  id="global-region-name" onclick="displayinformation('Ireland')">
+                            <P> Ireland</P>
+                            <img id="flag" src="media/Ireland.png">
+                        </div>
+
+                        <div  id="global-region-name" onclick="displayinformation('Italy')">
+                            <P> Italy</P>
+                            <img id="flag" src="media/Italy.png">
+                        </div>
+            
+                        
+                        <div id="global-region-name" onclick="displayinformation('Latvia')">
+                            <P> Latvia</P>
+                            <img id="flag" src="media/Latvia.png"> 
+                        </div>
+
+                        
+                        <div  id="global-region-name" onclick="displayinformation('Lithuania')">
+                            <P> Lithuania</P>
+                            <img id="flag" src="media/Lithuania.png">
+                        </div>
+                        <div  id="global-region-name" onclick="displayinformation('Luxembourg')">
+                            <P> Luxembourg</P>
+                            <img id="flag" src="media/Luxembourg.png">
+                        </div>
+
+                        <div  id="global-region-name"  onclick="displayinformation('Malta')">
+                            <P> Malta</P>
+                            <img id="flag" src="media/Malta.png">
+                        </div>
+                        
+                        <div  id="global-region-name" onclick="displayinformation('Netherlands')">
+                            <P> Netherlands</P>
+                            <img id="flag" src="media/Netherlands.png">  
+                        </div>
+                        <div  id="global-region-name" onclick="displayinformation('Poland')">
+                            <P> Poland</P>
+                            <img id="flag" src="media/Poland.png">
+                        </div>
+
+                    
+
+                        <div  id="global-region-name" onclick="displayinformation('Portugal')">
+                            <P> Portugal</P>
+                            <img id="flag" src="media/Portugal.png"> 
+                        </div>
+
+
+                        <div  id="global-region-name" onclick="displayinformation('Romania')">
+                            <P> Romania</P>
+                            <img id="flag" src="media/Romania.png">
+                        </div>
+
+            
+                        <div  id="global-region-name" onclick="displayinformation('Slovakia')">
+                            <P> Slovakia</P>
+                            <img id="flag" src="media/Slovakia.png">      
+                        </div>
+
+                        <div  id="global-region-name" onclick="displayinformation('Slovenia')">
+                            <P> Slovenia</P>
+                            <img id="flag" src="media/Slovenia.png">     
+                        </div>
+
+
+                        <div  id="global-region-name" onclick="displayinformation('Spain')">
+                            <P> Spain</P>
+                            <img id="flag" src="media/spain.png">
+                        </div>
+                        <div  id="global-region-name"  onclick="displayinformation('Sweden')">
+                            <P> Sweden</P>
+                            <img id="flag" src="media/Sweden.png">             
+                        </div>
+                    
+                    </div>
+
+                </div>    
+
+
+                <div class="europe_right">
+                    <h2>Non-European Union Countries</h2>
+                    <div class="countries">
+
+                        <div id="global-region-name_eu_right" onclick="displayinformation('Albania')"  >
+                            <P> Albania</P>
+                            <img id="flag" src="media/albania.png">       
+                        </div>
+
+                        <div  id="global-region-name_eu_right" onclick="displayinformation('Belarus')">
+                            <P> Belarus</P>
+                            <img id="flag" src="media/Belarus.png">
+                        </div>
+                        <div id="global-region-name_eu_right" onclick="displayinformation('Bosnia')">
+                            <P> Bosnia</P>
+                            <img id="flag" src="media/bosnia.png">
+                        </div>
+                        
+                        <div id="global-region-name_eu_right" onclick="displayinformation('Iceland')">
+                            <P> Iceland</P>
+                            <img id="flag" src="media/Iceland (App UI).jpg">
+                        </div>
+                    
+                        <div id="global-region-name_eu_right"onclick="displayinformation('Liechtenstein')">
+                            <P> Liechtenstein</P>
+                            <img id="flag" src="media/Liechtenstein.png">
+                        </div>
+                        <div  id="global-region-name_eu_right" onclick="displayinformation('Moldova')">
+                            <P> Moldova</P>
+                            <img id="flag" src="media/Moldova.png">  
+                        </div>
+
+                        <div  id="global-region-name_eu_right" onclick="displayinformation('Monaco')">
+                            <P> Monaco</P>
+                            <img id="flag" src="media/Monaco.png">
+                        </div>
+
+                        <div  id="global-region-name_eu_right" onclick="displayinformation('Montenegro')">
+                            <P> Montenegro</P>
+                            <img id="flag" src="media/Montenegro.png">
+                        </div>
+
+                        <div id="global-region-name_eu_right" onclick="displayinformation('NorthMacedonia')">
+                            <P> N.Macedonia</P>
+                            <img id="flag" src="media/NorthMacedonia.png"> 
+                        </div>
+
+                        <div id="global-region-name_eu_right" onclick="displayinformation('Norway')">
+                            <P> Norway</P>
+                            <img id="flag" src="media/Norway.png">
+                        </div>
+
+                
+                        <div id="global-region-name_eu_right" onclick="displayinformation('Russia')">
+                            <P> Russia</P>
+                            <img id="flag" src="media/Russia.png">
+                        </div>
+                        <div  id="global-region-name_eu_right" onclick="displayinformation('Serbia')">
+                            <P> Serbia</P>
+                            <img id="flag" src="media/Serbia.png">  
+                        </div>
+                
+                        <div id="global-region-name_eu_right" onclick="displayinformation('Switzerland')">
+                            <P> Switzerland</P>
+                            <img id="flag" src="media/Switzerland.png">
+                        </div>
+                
+                    
+                        <div  id="global-region-name_eu_right" onclick="displayinformation('turkey')">
+                            <P> Turkey</P>
+                            <img id="flag" src="media/turkey.png">             
+                        </div>
+                        <div  id="global-region-name_eu_right" onclick="displayinformation('Ukraine')">
+                            <P> Ukraine</P>
+                            <img id="flag" src="media/Ukraine.png">
+                        </div>
+
+                        <div  id="global-region-name_eu_right" onclick="displayinformation('UnitedKingdom')">
+                            <P> UK</P>
+                            <img id="flag" src="media/UnitedKingdom.jpg">
+                        </div>
+                    
+                    
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+
+    </div>
+
+    <div id="myModal_asia" class="modal_asia">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="secondary_heading">
+                <select id="select_page2" style="width:200px;" class="operator" onchange="callcountry2()"> 
+                </select>  
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                  //change selectboxes to selectize mode to be searchable
+                     $("#select_page2").select2();
+                  });
+                  </script>
+                <span  id="home_btn" onclick="closeasia()">&times;</span>
+            </div>
+
+            <div class="secondary_con">
+                <h2> Asia Pacific Countries</h2>
+                <div  id="global-region-name_sec" onclick="displayinformation('Australia')">
+                    <P> Australia</P>
+                    <img id="flag" src="media/Australia.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Bahrain')">
+                    <P> Bahrain</P>
+                    <img id="flag" src="media/Bahrain.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Bangladesh')">
+                    <P> Bangladesh</P>
+                    <img id="flag" src="media/Bangladesh.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('bhutan')">
+                    <P> Bhutan</P>
+                    <img id="flag" src="media/bhutan.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('China')">
+                    <P> China</P>
+                    <img id="flag" src="media/China.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Fiji')">
+                    <P> Fiji</P>
+                    <img id="flag" src="media/Fiji.jpg">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('HongKong')">
+                    <P> Hong Kong</P>
+                    <img id="flag" src="media/HongKong.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('India')">
+                    <P> India</P>
+                    <img id="flag" src="media/India.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Indonesia')">
+                    <P> Indonesia</P>
+                    <img id="flag" src="media/Indonesia.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Israel')">
+                    <P> Israel</P>
+                    <img id="flag" src="media/Israel.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Japan')">
+                    <P> Japan</P>
+                    <img id="flag" src="media/Japan.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Jordan')">
+                    <P> Jordan</P>
+                    <img id="flag" src="media/Jordan.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Kazakhstan')">
+                    <P> Kazakhstan</P>
+                    <img id="flag" src="media/Kazakhstan.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Kyrgyzstan')">
+                    <P> Kyrgyzstan</P>
+                    <img id="flag" src="media/Kyrgyzstan.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Laos')">
+                    <P> Laos</P>
+                    <img id="flag" src="media/Laos.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Malaysia')">
+                    <P> Malaysia</P>
+                    <img id="flag" src="media/Malaysia.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Maldives')">
+                    <P> Maldives</P>
+                    <img id="flag" src="media/Maldives.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Myanmar')">
+                    <P> Myanmar</P>
+                    <img id="flag" src="media/Myanmar.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Nepal')">
+                    <P> Nepal</P>
+                    <img id="flag" src="media/Nepal.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('NewZealand')">
+                    <P> New Zealand</P>
+                    <img id="flag" src="media/NewZealand.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Oman')">
+                    <P> Oman</P>
+                    <img id="flag" src="media/Oman.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Pakistan')">
+                    <P> Pakistan</P>
+                    <img id="flag" src="media/Pakistan.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Philippines')">
+                    <P> Philippines</P>
+                    <img id="flag" src="media/Philippines.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('SaudiArabia')">
+                    <P> Saudi Arabia</P>
+                    <img id="flag" src="media/SaudiArabia.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Singapore')">
+                    <P> Singapore</P>
+                    <img id="flag" src="media/Singapore.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('SouthKorea')">
+                    <P> South Korea</P>
+                    <img id="flag" src="media/SouthKorea.jpg">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('SriLanka')">
+                    <P> Sri Lanka</P>
+                    <img id="flag" src="media/SriLanka.jpg">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Taiwan')">
+                    <P> Taiwan</P>
+                    <img id="flag" src="media/Taiwan.png">
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Thailand')">
+                    <P> Thailand</P>
+                    <img id="flag" src="media/Thailand.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('UAE')">
+                    <P> UAE</P>
+                    <img id="flag" src="media/UAE.png">
+                </div>
+                <div  id="global-region-name_sec"  onclick="displayinformation('Vietnam')">
+                    <P> Vietnam</P>
+                    <img id="flag" src="media/Vietnam.png">
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="myModal_america" class="modal_america">
+
+        <!-- Modal content -->
+        <div class="modal-content" id="android_content">
+            <div class="secondary_heading">
+                <select id="select_page3" style="width:200px;" class="operator" onchange="callcountry3()"> 
+                </select>  
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                  //change selectboxes to selectize mode to be searchable
+                     $("#select_page3").select2();
+                  });
+                  </script>
+                <span  id="home_btn" onclick="closeamerica()">&times;</span>
+            </div>
+            <div class="american_content">
+
+                <div class="europe_left">
+                    <h2 id="america_heading">North American Countries</h2>
+                    <div class="american_con">
+                    
+                        <div >
+                    
+                           
+                            <div id="global-region-name_america" onclick="displayinformation('Canada')">
+                                <P> Canada</P>
+                                <img id="flag" src="media/Canada.png">  
+                            </div>
+                            <div  id="global-region-name_america" onclick="displayinformation('CostaRica')">
+                                <P> Costa Rica</P>
+                                <img id="flag" src="media/CostaRica.png">
+                            </div>
+                        
+                            <div  id="global-region-name_america" onclick="displayinformation('Cuba')">
+                                <P> Cuba</P>
+                                <img id="flag" src="media/Cuba.png">
+                            </div><br>
+                           
+                            <div  id="global-region-name_ameria_right_left"  onclick="displayinformation('Mexico')">
+                                <P> Mexico</P>
+                                <img id="flag" src="media/Mexico.png">
+                            </div>
+        
+                            <div id="global-region-name_ameria_right_left" onclick="displayinformation('USA')">
+                                <P> USA</P>
+                                <img id="flag" src="media/USA.jpg">         
+                            </div>
+                    
+                        </div>
+    
+                        
+                     </div>
+                </div>    
+    
+    
+                <div class="europe_right">
+                    <h2 id="america_heading_2"> South American Countries</h2>
+                    <div class="countries">
+
+                        <div  id="global-region-name_ameria_right" onclick="displayinformation('Argentina ')">
+                            <P> Argentina </P>
+                            <img id="flag" src="media/argentina.png">
+                        </div>
+
+                        <div  id="global-region-name_ameria_right" onclick="displayinformation('Bolivia')">
+                            <P> Bolivia</P>
+                            <img id="flag" src="media/Bolivia.png">
+                        </div>
+            
+                        <div  id="global-region-name_ameria_right" onclick="displayinformation('Brazil')">
+                            <P> Brazil</P>
+                            <img id="flag" src="media/Brazil.jpg"> 
+                        </div> 
+                    
+                      
+                        <div  id="global-region-name_ameria_right" onclick="displayinformation('Colombia')">
+                            <P> Colombia</P>
+                            <img id="flag" src="media/Colombia.png">
+                        </div>
+                        
+                      
+                        <div  id="global-region-name_ameria_right" onclick="displayinformation('Chile')">
+                            <P> Chile</P>
+                            <img id="flag" src="media/Chile.png">  
+                        </div>
+    
+                        <div  id="global-region-name_ameria_right" onclick="displayinformation('Ecuador')">
+                            <P> Ecuador</P>
+                            <img id="flag" src="media/Ecuador.png">
+                        </div>
+    
+                       
+                        <div  id="global-region-name_ameria_right"  onclick="displayinformation('Peru')">
+                            <P> Peru</P>
+                            <img id="flag" src="media/Peru.png">
+                        </div>
+    
+                        
+                       
+                    </div>
+    
+                </div>
+             </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="myModal_africa" class="modal_africa">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="secondary_heading">
+                <select id="select_page4" style="width:200px;" class="operator" onchange="callcountry4()"> 
+                </select>  
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                  //change selectboxes to selectize mode to be searchable
+                     $("#select_page4").select2();
+                  });
+                  </script>
+                <span  id="home_btn" onclick="closeafrica()">&times;</span>
+            </div>
+
+            
+            <div class="secondary_con">
+                <h2>African Countries</h2>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Botswana')">
+                    <P> Botswana</P>
+                    <img id="flag" src="media/Botswana.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Cameroon')">
+                    <P> Cameroon</P>
+                    <img id="flag" src="media/Cameroon.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Egypt')">
+                    <P> Egypt</P>
+                    <img id="flag" src="media/Egypt.png">
+                    
+                </div>
+
+                <div  id="global-region-name_sec" onclick="displayinformation('Ethiopia')">
+                    <P> Ethiopia</P>
+                    <img id="flag" src="media/Ethiopia.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Ghana')">
+                    <P> Ghana</P>
+                    <img id="flag" src="media/Ghana.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Kenya')">
+                    <P> Kenya</P>
+                    <img id="flag" src="media/Kenya.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Lebanon')">
+                    <P> Lebanon</P>
+                    <img id="flag" src="media/Lebanon.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Nigeria')">
+                    <P> Nigeria</P>
+                    <img id="flag" src="media/Nigeria.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Rwanda')">
+                    <P> Rwanda</P>
+                    <img id="flag" src="media/Rwanda.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('SouthAfrica')">
+                    <P> South Africa</P>
+                    <img id="flag" src="media/SouthAfrica.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Sudan')">
+                    <P> Sudan</P>
+                    <img id="flag" src="media/Sudan.png">
+                </div>
+    
+                <div  id="global-region-name_sec" onclick="displayinformation('Tanzania')">
+                    <P> Tanzania</P>
+                    <img id="flag" src="media/Tanzania.jpg">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Uganda')">
+                    <P> Uganda</P>
+                    <img id="flag" src="media/Uganda.png">
+                </div>
+                <div  id="global-region-name_sec" onclick="displayinformation('Zambia')">
+                    <P> Zambia</P>
+                    <img id="flag" src="media/Zambia.jpg">
+                </div>
+                <div  id="global-region-name_sec"  onclick="displayinformation('Zanzibar')">
+                    <P> Zanzibar</P>
+                    <img id="flag" src="media/Zanzibar.png">
+                </div>
+               
+        
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div id="myModal_ug" class="modal_ug">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="secondary_heading_data">
+               
+                <span  id="home_btn" onclick="closeug()">&times;</span>
+            </div>
+
+            
+            <div class="secondary_con">
+                <h2> List of Low Regulated and Unregulated Countries</h2>
+
+                <table >
+                    <tr>
+                        <td><a href="https://afda.gov.af/search?keys=medical+device">Afghanistan</a> </td>
+                        <td>Cayman Islands, The</td>
+                        <td>Gabon</td>
+                        <td><a href="https://www.moh.gov.kw/ar/Pages/default.aspx">Kuwait</a> </td>
+                        <td>Palestine</td>
+                        <td>Tonga</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.dpm.tn/accueil/role-et-mission">Algeria</a> </td>
+                        <td>Central African Republic</td>
+                        <td><a href="https://www.mca.gm/">Gambia</a> </td>
+                        <td>Lesotho</td>
+                        <td>Palestine State</td>
+                        <td>Tunisia</td>
+                    </tr>
+                    <tr>
+                        <td>American Samoa</td>
+                        <td>Chad</td>
+                        <td>Georgia</td>
+                        <td>Liberia</td>
+                        <td>Papua New Guinea</td>
+                        <td>Turkmenistan</td>
+                    </tr>
+                    <tr>
+                        <td>Andorra</td>
+                        <td>Christmas Island</td>
+                        <td>Grenada</td>
+                        <td><a href="https://www.health.gov.ly/">Libya</a> </td>
+                        <td><a href="https://www.moph.gov.qa/english/derpartments/policyaffairs/facilitieslicensingandaccreditationdepartment/Pages/default.aspx">Qatar</a> </td>
+                        <td><a href="https://gov.uz/en/ssv/sections/litsenziyalash/">Uzbekistan</a> </td>
+                    </tr> 
+                    <tr>
+                        <td>Angola</td>
+                        <td>Cocos (Keeling) Islands</td>
+                        <td>Guam, US</td>
+                        <td>Malawi</td>
+                        <td>Saint Kitts and Nevis</td>
+                        <td><a href="https://www.sbd-ye.org/index.php/regulations-laws/decisions-regulations.html">Yemen</a> </td>
+                    </tr>
+                    <tr>
+                        <td>Antigua and Barbuda</td>
+                        <td>Comoros</td>
+                        <td>Guatemala</td>
+                        <td>Mali</td>
+                        <td>Saint Lucia</td>
+                        <td><a href="https://www.mcaz.co.zw/">Zimbabwe</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.pharm.am/index.php/en/about-us">Armenia</a> </td>
+                        <td>Congo (Congo-Brazzaville)</td>
+                        <td><a href="https://sante.gov.gn/">Guinea</a> </td>
+                        <td>Marshall Islands</td>
+                        <td>Saint Vincent and the Grenadines</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://pharma.az/?lang=3&ind=main&id=28">Azerbaijan</a> </td>
+                        <td>Cook Islands</td>
+                        <td>Guinea-Bissau</td>
+                        <td>Mauritania</td>
+                        <td><a href="https://www.gov.sm/pub2/GovSM/Authority-Sanitaria.html"> San Marino</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.bahamas.gov.bs/wps/portal/public/The%20Bahamas%20Medical%20Council/Bahamas%20Medical%20Council/!ut/p/b1/vZTJjqMwGISfpR-AxoDDcoRgCAGcsC-XiCUJS0hIIAR4-qE1Lc2pey4zbZ8sVfnTX_pVZEyGZHxNhvKc9OXtmlw-3jF7YNSdaa0hb_IsFIBGuViT0Z5RGWoRRIsAfHFE8NsPVFMUF_-Odj_8a4rVvRXgZZYMyDCP6FHutLOC_EMRBfZZ9_o4txq21-HTcIyzlbWNqGM7FU7cbgUyAsZyy9wkWR3oHNkdodCnwWrjopvjB9fpwoN_skQU5vo1wpXP-Bfg1VDpk42knoW7FVKsfRCN-MorRkL5c55GcyaM28Nare6MF25yHZU7tDXCQs7RZq6rvLzdpbSxLucofR5PrzVSU8kX394-5_9mwL_kF5Dx9xHBT8E3EePNrTmS0SLjvvxHAqRLhgAenGpqtbme7Wp2Zlfe7rq6BBQCI-ZOHvbqEfc-NiuLBrI3mnM2OQhOvetMLk73uW97kijaYRWo3wMdg_1ZIC9RPw3k_jtQp5kFaDAG5teUozI_DOT__dJsybhMm_dX1ryDd15gaGHFAR7y1IoCFOlXEcstXfCSly5oo36jdkLniXVkrV9ma_UTYCU01c8tQciDHnjPaDCoffpwUBrAhEigZFnZyCHwcPpLpq3dbobyWFjsS2MjQvL8mzgdL8HJNlSl9Cx8fNzyjXAE0hxOrn-YWhfKG9OchkCQ8J3e7ptivsC7xmp8HfjHUsBS_FKi6qCgk7-6F35TUJWD5tkckh67W0drcwXBKzUOxRXtvT3y1UF0n1lOE9HVZm5k23iDwdo8Pv255lIkvwAqCf6n/dl4/d5/L2dBISEvZ0FBIS9nQSEh/">Bahamas</a> </td>
+                        <td><a href="https://www.ministeriodesalud.go.cr/#"></a> Costa Rica</td>
+                        <td>Guyana</td>
+                        <td>Mauritius</td>
+                        <td>Sao Tome and Principe</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Barbados</td>
+                        <td>Cote d’Ivoire (Ivory Coast)</td>
+                        <td>Haiti</td>
+                        <td>Micronesia</td>
+                        <td>Seychelles</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Belize</td>
+                        <td>Democratic Republic of the Congo</td>
+                        <td>Holy See</td>
+                        <td>Mozambique</td>
+                        <td>Solomon Islands</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.santegouvbj.com/medicals">Benin</a> </td>
+                        <td>Djibouti</td>
+                        <td>Honduras</td>
+                        <td><a href="https://nmrc.gov.na/">Namibia</a> </td>
+                        <td>Somalia</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.moh.gov.bn/SitePages/Registration%20Medical%20Product.aspx">Brunei</a> </td>
+                        <td>Dominica</td>
+                        <td>Iran</td>
+                        <td>Nauru</td>
+                        <td>South Sudan</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Burkina Faso (Upper Volta)</td>
+                        <td>Dominican Republic</td>
+                        <td>Iraq</td>
+                        <td>Niger</td>
+                        <td>Suriname</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Burundi</td>
+                        <td>El Salvador</td>
+                        <td>Jamaica</td>
+                        <td>Niue</td>
+                        <td>Syria</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Cabo Verde</td>
+                        <td>Equatorial Guinea</td>
+                        <td>Kiribati</td>
+                        <td>Palau</td>
+                        <td>Tajikistan</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.ddfcambodia.com/">Cambodia</a> </td>
+                        <td>Eritrea</td>
+                        <td>Kosovo</td>
+                        <td><a href="https://www.minsa.gob.pa/direccion/direccion-nacional-de-dispositivos-medicos">Panama</a> </td>
+                        <td>Timor-Leste</td>
+                        <td></td>
+                    </tr>
+
+                </table>
+               
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="myModal_go" class="modal_go">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="secondary_heading_data">
+               
+                <span  id="home_btn" onclick="closego()">&times;</span>
+            </div>
+
+            
+            <div class="secondary_con">
+                <div class="card-heading">
+                
+                <h2>Global Organization</h2>
+    
+            </div>
+                <div class="organisation">
+                    <div class="f1" onclick="callglobalinfo('IMDRF')"> 
+                        <p>IMDRF</p>
+
+                    </div>
+                    <div class="f2" onclick="callglobalinfo('MDSAP')">
+                        <P>MDSAP</P>
+
+                    </div>
+                    <div class="f3" onclick="callglobalinfo('EAEU')">
+                        
+                        <P>EAEU</P>
+                    </div>
+                </div>
+                <div class="organisation">
+                    <div class="f4" id="margin_bottom" onclick="callglobalinfo('WHO')">
+                     
+                        <P>WHO</P>
+                    </div>
+                    <div class="f5" id="margin_bottom" onclick="callglobalinfo('ASEAN')">
+                      <P>ASEAN</P>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="footer">
+        
+        <div class="footer_left">
+           
+            <h3> <b>Global MedRegs</b> </h3><br>
+               <p> We aim to offer a user-friendly platform that simplifies access to global regulatory 
+                information for medical device manufacturers.</P>
+        </div>
+
+        <div class="footer-img">
+            <h2> Contact </h2> <br>
+         
+            <a style="color: black;" href="https://www.linkedin.com/company/globalmedregs/"><P> <i class="fa-brands fa-linkedin" id="linkedin_icon"> </i> <b>LinkedIn</b> </P> </a> <br>
+           <P> <img src="media/gmail.png" class="footer_icon_email"> <b>globalmedregs@gmail.com</b></P> 
+        </div>
+
+        <div class="footer_right">
+            <h3> Sign Up for the latest update</h3>  
+                <input type="email" placeholder="Email Address" id="footer_email"><br>
+                <button id="signup_btn" onclick="subscribe()">Sign up</button>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- <div class="footer_1">
+        
+        <div class="footer_left">
+         
+            <h3> <b>Global MedRegs</b> </h3><br>
+               <p> We aim to offer a user-friendly platform that simplifies access to global regulatory 
+                information for medical device manufacturers.</P>
+        </div>
+
+        <div class="footer-img">
+            <h2> Contact </h2> <br>
+         
+             <P><i class="fa-brands fa-linkedin"></i> <b>LinkedIn</b> </P> <br>
+           <P> <i class="fa-regular fa-envelope"></i> <b>globalmedregs@gmail.com</b></P> 
+        </div>
+
+        <div class="footer_right">
+            <h3> Sign Up for the latest update</h3>  
+                <input type="email" placeholder="Email Address" id="footer_email"><br>
+                <button id="signup_btn" onclick="subscribe()">Sign up</button>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer_2">
+        
+        <div class="footer_left">
+           
+            <h3> <b>Global MedRegs</b> </h3><br>
+               <p> We aim to offer a user-friendly platform that simplifies access to global regulatory 
+                information for medical device manufacturers.</P>
+        </div>
+
+        <div class="footer-img">
+            <h3> Contact </h3> <br>
+         
+             <P><i class="fa-brands fa-linkedin" id="linkedin2"></i> <b>LinkedIn</b> </P> <br>
+           <P> <i class="fa-regular fa-envelope" id="env2"></i> <b>globalmedregs@gmail.com</b></P> 
+        </div>
+
+        <div class="footer_right">
+                <h3> Sign Up for the latest update</h3>  
+                <input type="email" placeholder="Email Address" id="footer_email"><br>
+                <button id="signup_btn_3" onclick="subscribe()">Sign up</button>
+
+        </div>
+
+
+    </div> -->
+
+    <div class="copyright">
+        <p>Copyright @ 2024</p>
+    </div>
+
+    
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+<script src="js/fetchinfo.js"></script>
+<script>fetchdata()</script>
+
+<script>
+    function zoom() {
+            document.body.style.zoom = "90%" 
+    }
+    zoom();
+</script>
+</html>
