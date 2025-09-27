@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Regulatory</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/android.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="../js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+   
+</head>
+
+<body id="body">
+
+    <div id="android_header">
+        <div id="android_header_left">
+
+             <div id="mySidepanel" class="sidepanel">
+             
+                <div class="sidepanel-content">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <img src="../media/logo_new.png">
+                    <button onclick="openhome()">About</button>
+                    <button onclick="opennews()">News</button>
+                    <button onclick="openfeedback()">Feedback</button>
+                    <button onclick="opencontact()">Contact Us</button>
+                    <p>copyright @ 2024</p>
+                    
+                </div>
+             </div>
+
+           <button class="openbtn" id="androidbtn" onclick="openNav()">☰</button>
+           
+           
+        </div>
+    </div>
+
+    
+    <div id="android_con">
+        <p>Under Developemnt</p>
+     </div>
+
+    <div class='container' id="container">
+        <div class='secondaryloader'>      
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--text'></div>
+        </div>
+      </div>
+
+    <div id="header_con">
+        <div class="header_left">
+            <img id="header_logo_sec" src="../media/logo_new.png">
+        </div>
+
+        <div class="header_flag">
+           
+            
+        </div>
+
+        <div class="header_right">
+            <select id="select_page9" style="width:200px;" class="operator" onchange="callcountry9()"> 
+            </select>  
+            <script type="text/javascript">
+                $(document).ready(function () {
+              //change selectboxes to selectize mode to be searchable
+                 $("#select_page9").select2();
+              });
+              </script>
+            <button  onclick="openindex()" id="secondary_button"><i class="fa-solid fa-house"></i></button>
+             
+        </div>
+       
+    </div>
+
+    <div class="secondary_header_con">
+
+       <div class="home_c1">
+        <h2 id="display_heading"></h2>
+       </div>
+       <div class="home_c2">
+        <img id="display_country_image">
+       </div>
+
+
+    </div>
+
+    <div class="country_info_details_con" >
+
+        <p id="C"></p>
+        <a id="DA"  href="#"><p id="D"></p></a>
+        <p id="E"></p>
+        <a id="G"  href="#"><p id="F"></p></a>
+        <p id="H"></p>
+        <a id="J"  href="#"><p id="I"></p></a>
+        <p id="K"></p>
+        <p id="L"></p>
+        <a id="N"  href="#"><p id="M"></p></a>
+        <p id="O"></p>
+        <p id="P"></p>
+        <p id="Q"></p>
+        <p id="R"></p>
+
+
+        <p>For any modifications, please <a style="color: blue;" href="../index.html">Report US</a></p>
+        <p id="end_P"><b>Disclaimer:</b> The above information was last updated on 10 May, 2024</p>
+
+    </div>
+
+
+
+
+
+    
+    <div class="footer">
+        
+        <div class="footer_left">
+           
+            <h3> <b>Global MedRegs</b> </h3><br>
+               <p> We aim to offer a user-friendly platform that simplifies access to global regulatory 
+                information for medical device manufacturers.</P>
+        </div>
+        <div class="footer-img">
+            <h2> Contact </h2> <br>
+         
+            <a style="color: black;" href="https://www.linkedin.com/company/globalmedregs/"><P> <i class="fa-brands fa-linkedin" id="linkedin_icon"> </i> <b>LinkedIn</b> </P> </a> <br>
+           <P> <img src="../media/gmail.png" class="footer_icon_email"> <b>globalmedregs@gmail.com</b></P> 
+        </div>
+
+        <div class="footer_right">
+            <h3> Sign Up for the latest update</h3>  
+                <input type="email" placeholder="Email Address" id="footer_email"><br>
+                <button id="signup_btn" onclick="subscribe()">Sign up</button>
+
+        </div>
+
+
+    </div>
+
+    <div class="copyright">
+        <p>Copyright @ 2024</p>
+    </div>
+    
+</body>
+
+<script>
+    // extract the country name from url
+    window.onload = function () {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        data = {}, tmp;
+    for (var i = 0, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+    }
+
+  var c=data.countryname;
+  //set the information in p tag
+  document.getElementById('display_heading').innerHTML="Medical Device Regulatory Requirements in "+ c;
+  //set tghe image
+  var path="../media/"+c+".png";
+  document.getElementById('display_country_image').src=path;
+  fetchspecificdata(c);
+}
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+<script src="../js/fetchinfo.js"></script>
+<script>fetchdatamediacal()</script>
+
+<script>
+    function zoom() {
+            document.body.style.zoom = "90%" 
+    }
+    zoom();
+</script>
+</html>

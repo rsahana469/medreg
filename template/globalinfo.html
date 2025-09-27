@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Regulatory</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/android.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="../js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <style>
+    li{
+        margin-bottom: 10px;
+    }
+    </style>
+   
+  
+<script src="../js/index.js"></script>
+</head>
+
+<body>
+
+    <div id="android_header">
+        <div id="android_header_left">
+
+             <div id="mySidepanel" class="sidepanel">
+             
+                <div class="sidepanel-content">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <img src="../media/logo_new.png">
+                    <button onclick="openhome()">About</button>
+                    <button onclick="opennews()">News</button>
+                    <button onclick="openfeedback()">Feedback</button>
+                    <button onclick="opencontact()">Contact Us</button>
+                    <p>copyright @ 2024</p>
+                    
+                </div>
+             </div>
+
+           <button class="openbtn" id="androidbtn" onclick="openNav()">☰</button>
+           
+           
+        </div>
+        	
+       
+    </div>
+
+    <div id="android_con">
+        <p>Under Developemnt</p>
+     </div>
+
+    <div class='container' id="container">
+        <div class='secondaryloader'>      
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--text'></div>
+        </div>
+      </div>
+
+    <div id="header_con">
+        <div class="header_left">
+            <img id="header_logo_sec" src="../media/logo_new.png">
+        </div>
+
+        <div class="header_flag">
+           
+            
+        </div>
+
+        <div class="header_right">
+            <select id="select_page8" style="width:200px;" class="operator" onchange="callcountry8()"> 
+            </select>  
+            <script type="text/javascript">
+                $(document).ready(function () {
+              //change selectboxes to selectize mode to be searchable
+                 $("#select_page8").select2();
+              });
+              </script>
+            <button  onclick="openindex()" id="secondary_button"><i class="fa-solid fa-house"></i></button>
+             
+        </div>
+       
+    </div>
+
+ 
+    <div class="global_info_details_con_MDSAP" id="global_info_details_con_MDSAP" >
+        <div class="secondary_header_con_global">
+
+            <div class="home_c1">
+             <h2 id="display_heading">MDSAP</h2>
+            </div>
+            <div class="home_c2">
+             <img id="display_image" src="../media/MDSAP.png">
+            </div>
+     
+         </div>
+     
+
+        <P id="definition"> <b>Defination:</b>MDSAP aims to develop a global approach to auditing and monitoring the manufacturing of medical devices</P>
+        <P id="c_a"> <b>Country Assosciated:</b> 
+            <ul>
+                <li>Australia</li>
+                <li>Brazil</li>
+                <li>Canada</li>
+                <li>Japan</li>
+                <li>USA</li>
+                <li>These nations work together to identify and acknowledge MDSAP audit findings as proof of regulatory compliance.
+                </li>
+            </ul>
+           </P>
+            <P id="year"> <b>Established Year:</b>  2014 </P>
+        <P id="member"> <b>Member:</b>
+            
+            <ul>
+                <li>Therapeutic Goods Administration of Australia.
+                </li>
+                <li>Brazil's Agência Nacional de Vigilância Sanitária.
+                </li>
+                <li>Health Canada.
+                </li>
+                <li>Japan's Ministry of Health, Labour and Welfare, and the Japanese Pharmaceuticals and Medical Devices Agency.
+                </li>
+                <li>U.S. Food and Drug Administration.
+                </li>
+            </ul>
+        </P>
+        <P id="func"> <b>Function : </b>The MDSAP allows recognised Auditing Organizations to audit medical device manufacturers in a single program that satisfies the requirements of the participating regulatory authorities
+            <P id="adv"> <b>Advantage:</b> 
+                <ul>
+                    <li> It streamlines compliance for manufacturers by implementing a single audit that meets multiple regulatory criteria, enhancing operational efficiency. 
+                    </li>
+                    <li>This eliminates the need for separate audits in participating countries, reducing duplication of efforts. 
+                    </li>
+                    <li>Harmonizing audit processes improves regulatory adherence assessment, ensuring consistency and effectiveness in compliance evaluations.
+                    </li>
+                    <li>Provides easy registration process and entry to multople markets.
+                    </li>
+                    <li>Reduces the overall Audit cost and audit time.
+                    </li>
+                    <li>MDSAP certificates can be merged with ISO 13485 or CE mark.
+
+                    </li>
+                </ul>
+            </P>
+        <P id="cert"> <b>Certification :</b>
+            <ul>
+                <li> An MDSAP certificate is granted to manufacturers who have satisfactorily completed the audit, serving as evidence of their adherence to the regulatory requirements.
+
+                </li>
+                <li> In those countries, the regulatory authorities recognize this certification.
+                </li>
+                <li> MDSAP certificate is valid for 3 years
+                </li>
+              
+            </ul>
+        </P>
+
+        <br>
+
+
+    </div>
+
+    <div class="global_info_details_con_IMDRF" id="global_info_details_con_IMDRF" >
+        <div class="secondary_header_con_global">
+
+            <div class="home_c1">
+             <h2 id="display_heading">IMDRF</h2>
+            </div>
+            <div class="home_c2">
+             <img id="display_image" src="../media/IMDRF.jpg">
+            </div>
+     
+         </div>
+     
+
+        <P id="definition"> <b>Defination:</b>IMDRF is a voluntary group of medical device regulators from around the world that aims to accelerate international regulatory harmonization and convergence for medical devices </P>
+        <P id="c_a"> <b>Country Assosciated:</b> 
+            <ul>
+                <li>Australia (represented by the Therapeutic Goods Administration - TGA)
+                </li>
+                <li>Brazil (represented by the Brazilian Health Regulatory Agency - ANVISA)
+                </li>
+                <li>Canada (represented by Health Canada)
+                </li>
+                <li>China (represented by the National Medical Products Administration - NMPA)
+                </li>
+                <li>European Union (represented by the European Commission's Directorate-General for Health and Food Safety)
+                </li>
+                <li>Japan (represented by the Pharmaceuticals and Medical Devices Agency - PMDA, and the Ministry of Health, Labour and Welfare - MHLW)
+                </li>
+                <li>Singapore (represented by the Health Sciences Authority - HSA)
+                </li>
+                <li>South Korea (represented by the Ministry of Food and Drug Safety - MFDS)
+                </li>
+                <li>United Kingdom (represented by the Medicines and Healthcare products Regulatory Agency - MHRA)
+                </li>
+                <li>United States of America (represented by the U.S. Food and Drug Administration - FDA)</li>
+            </ul>
+           </P>
+            <P id="year"> <b>Established Year:</b>  2011 </P>
+  
+            <P id="adv"> <b>Function:</b> 
+                <ul>
+                    <li> The IMDRF maintains working relationships with other international entities and regional organizations to foster global convergence. 
+
+                    </li>
+                    <li>IMDRF aims to promote high standards for safe and performant medical devices globally. 
+
+                    </li>
+                    <li>IMDRF develops and publishes various documents to support regulatory harmonization
+                    </li>
+                   
+                </ul>
+            </P>
+            <P id="func"> <b>Advantage : </b> 
+                <ul>
+                    <li>Develops harmonized standards and guidance documents 
+                    </li>
+                    <li>Promotes international regulatory convergence and harmonization
+
+                    </li>
+                    <li>Enables efficient and effective regulatory model
+                    </li>
+                    <li>Facilitates global electronic submissions</li>
+                    <li>Promotes collaboration and knowledge sharing</li>
+                   
+                </ul>
+            
+            </P>
+
+        <P id="cert"> <b>Additional Information :</b>
+            Global Harmonization Task Force (GHTF) was started in 1992 to achieve greater uniformity between national medical device regulatory systems and GHTF was repIaced by IMDRF in 2011
+        </P>
+
+        <br>
+
+
+    </div>
+
+    <div class="global_info_details_con_EAEU" id="global_info_details_con_EAEU" >
+        <div class="secondary_header_con_global">
+
+            <div class="home_c1">
+             <h2 id="display_heading">EAEU</h2>
+            </div>
+            <div class="home_c2">
+             <img id="display_image" src="../media/EAEU.jpg">
+            </div>
+     
+         </div>
+     
+
+        <P id="definition"> <b>Defination:</b>EAEU  is a regional economic union of former Soviet states seeking deeper integration through a single market, coordinated economic policies, and supranational governing institutions, modeled after the European Union</P>
+        <P id="c_a"> <b>Country Assosciated:</b> 
+            The EAEU currently consists of five member states - Russia, Kazakhstan, Belarus, Armenia, and Kyrgyzstan
+           </P>
+            <P id="year"> <b>Established Year:</b>  1/1/2022 </P>
+     
+        <P id="func"> <b>Function : </b>The MDSAP allows recognised Auditing Organizations to audit medical device manufacturers in a single program that satisfies the requirements of the participating regulatory authorities
+            <P id="adv"> <b>Advantage:</b> 
+                <ul>
+                    <li> The central law governing medical devices in the EAEU is the "Agreement on Common Principles and Rules for the Circulation of Medical Products (Medical Devices and Medical Equipment)"
+                    </li>
+
+                    <li>This agreement aims to harmonize regulations and create a common market for medical devices within the EAEU.
+                    </li>
+
+                    <li>Foreign manufacturers are required to appoint a local Authorized Representative (AR) within the EAEU.
+                    </li>
+                    <li>AR acts as a liaison with the competent authorities and manages submissions and post-market activities
+                    </li>
+                   
+                </ul>
+            </P>
+
+            <P id="adva"> <b>Advantage :</b>
+                <ul>
+                    <li> Harmonized regulatory framework across member states
+
+    
+                    </li>
+                    <li>Single registration for multiple markets
+
+                    </li>
+                    <li> Potential for faster market access
+
+                    </li>
+                    <li>Improved regulatory transparency
+
+                    </li>
+                  
+                </ul>
+            </P>
+        <P id="cert"> <b>Aditional Information :</b>
+            Potential candidates like Uzbekistan and Iran have shown interest but have not joined yet, citing concerns over trade limitations and economic readiness
+        </P>
+
+        <br>
+
+
+    </div>
+
+    <div class="global_info_details_con_WHO" id="global_info_details_con_WHO" >
+        <div class="secondary_header_con_global">
+
+            <div class="home_c1">
+             <h2 id="display_heading">WHO</h2>
+            </div>
+            <div class="home_c2">
+             <img id="display_image" src="../media/WHO.jpg">
+            </div>
+     
+         </div>
+     
+
+        <P id="definition"> <b>Defination:</b> WHO is a specialized agency of the United Nations responsible for international public health</P>
+        <P id="c_a"> <b>Country Assosciated:</b> 
+            The WHO has 194 member states as of January 2021 these include all member states of the United Nations except Liechtenstein, the Cook Islands and Niue.
+           </P>
+            <P id="year"> <b>Established Year:</b>  April 7, 1948 is celebrated annually as World Health Day, marking the establishment of the WHO </P>
+     
+        <P id="func"> <b>Function : </b> 
+        
+                <ul>
+                    <li>WHO develops evidence-based norms, standards, guidelines, and tools to support countries in addressing public health issues and promoting health.</li>
+                    <li>WHO offers technical assistance and builds sustainable institutional capacity in countries to prevent public health threats</li>
+                    <li>WHO influences the global health research agenda and stimulates the generation, translation, and dissemination of valuable knowledge</li>
+                    <li>WHO monitors and assesses global health trends, collects data on health issues, and provides authoritative information and evidence</li>
+                    <li>WHO coordinates and leads global efforts to prevent, detect, and respond to disease outbreaks and health emergencies</li>
+                    <li>WHO sets ethical standards and promotes the integration of ethical considerations into health policies and programs.</li>
+                </ul>
+            </P>
+            <P id="adv"> <b>Advantage:</b> 
+                <ul>
+                    <li>WHO provides Global authority and leadership.
+                    </li>
+
+                    <li>WHO has a worldwide presence and can mobilize global action on health issues
+
+                    </li>
+
+                    <li>WHO's norms, standards, and guidelines serve as a reference for countries, promoting harmonization and best practices
+
+                    </li>
+                    <li>WHO facilitates coordination and partnerships among countries, organizations, and stakeholders, 
+
+                    </li>
+                   
+                </ul>
+            </P>
+        <P id="cert"> <b>Aditional Information :</b>
+            Approximately 7000 people are working in 150 country offices and its Headquarters is located in Geneva, Switzerland        </P>
+
+        <br>
+
+
+    </div>
+
+    <div class="global_info_details_con_ASEAN" id="global_info_details_con_ASEAN" >
+        <div class="secondary_header_con_global">
+
+            <div class="home_c1">
+             <h2 id="display_heading">ASEAN</h2>
+
+            </div>
+            <div class="home_c2">
+             <img id="display_image"  src="../media/ASEAN.png">
+            </div>
+     
+         </div>
+     
+
+        <P id="definition"> <b>Defination:</b>AMDD aims to facilitate trade and market access of medical devices in the ASEAN region by reducing technical barriers through harmonization of regulations, common documentation requirements, and implementation progress</P>
+        <P id="c_a"> <b>Country Assosciated:</b> Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand, and Vietnam
+           </P>
+            <P id="year"> <b>Established Year:</b> 8/8/1967 </P>
+     
+        <P id="func"> <b>Function : </b> 
+        
+                <ul>
+                    <li>The AMDD classifies medical devices into four risk classes - Class A, B, C, and D, with risk levels increasing from A to D</li>
+                    <li>It provides guidelines on conformity assessment procedures, QMS, PMS, adverse event reporting, and other regulatory requirements for each device class</li>
+                    <li>The AMDD requires manufacturers to demonstrate conformity to Essential Principles of Safety and Performance (EPSP) through technical documentation,</li>
+                    <li>It establishes a Common Submission Dossier Template (CSDT) for product approval, including labeling, packaging materials, and instructions</li>
+                    <li>The ASEAN Medical Device Committee (AMDC) was formed in 2014 to coordinate the implementation of the AMDD and work towards regulatory convergence across ASEAN countries</li>
+                    
+                </ul>
+            </P>
+            <P id="adv"> <b>Advantage:</b> 
+                <ul>
+                    <li>AMDD aims to create a harmonized regulatory framework for medical devices within the ASEAN region
+                    </li>
+
+                    <li>
+                        The AMDD provides a more transparent and standardized regulatory framework, making it easier for manufacturers to understand and comply with the requirements across ASEAN countries
+
+                    </li>
+
+                    <li>By reducing the need for separate registrations and submissions in each ASEAN country, the harmonized AMDD framework can potentially lead to cost savings for manufacturers.
+
+                    </li>
+                    <li>The AMDD is part of the broader ASEAN Economic Community (AEC) initiative, which aims to liberalize intra-regional trade and investment. 
+
+                    </li>
+                   
+                </ul>
+            </P>
+        <P id="cert"> 
+         <a href="https://asean.org/wp-content/uploads/2021/08/22.-September-2015-ASEAN-Medical-Device-Directive.pdf"><b>Guidance Document: https://asean.org/wp-content/uploads/2021/08/22.-September-2015-ASEAN-Medical-Device-Directive.pdf</b></a>   </P>
+
+        <br>
+
+
+    </div>
+
+
+
+
+
+
+    
+    <div class="footer">
+        
+        <div class="footer_left">
+           
+            <h3> <b>Global MedRegs</b> </h3><br>
+               <p> We aim to offer a user-friendly platform that simplifies access to global regulatory 
+                information for medical device manufacturers.</P>
+        </div>
+        <div class="footer-img">
+            <h2> Contact </h2> <br>
+         
+            <a style="color: black;" href="https://www.linkedin.com/company/globalmedregs/"><P> <i class="fa-brands fa-linkedin" id="linkedin_icon"> </i> <b>LinkedIn</b> </P> </a> <br>
+           <P> <img src="../media/gmail.png" class="footer_icon_email"> <b>globalmedregs@gmail.com</b></P> 
+        </div>
+
+        <div class="footer_right">
+            <h3> Sign Up for the latest update</h3>  
+                <input type="email" placeholder="Email Address" id="footer_email"><br>
+                <button id="signup_btn" onclick="subscribe()">Sign up</button>
+
+        </div>
+
+
+    </div>
+
+    
+</body>
+
+<script>
+    // extract the country name from url
+    window.onload = function () {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        data = {}, tmp;
+    for (var i = 0, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+    }
+
+  var c=data.countryname;
+  //set the information in p tag
+  
+  document.getElementById('display_heading').innerHTML= c;
+  var path="../media/"+c+".png";
+  document.getElementById('display_image').src=path;
+  hide();
+  
+
+  function hide(){
+
+    if(c=="MDSAP"){
+    document.getElementById('global_info_details_con_MDSAP').style.display="block";
+    document.getElementById('global_info_details_con_IMDRF').style.display="none";
+    document.getElementById('global_info_details_con_EAEU').style.display="none";
+    document.getElementById('global_info_details_con_WHO').style.display="none";
+    document.getElementById('global_info_details_con_ASEAN').style.display="none";
+  }
+  else if(c=="IMDRF"){
+    document.getElementById('global_info_details_con_MDSAP').style.display="none";
+    document.getElementById('global_info_details_con_IMDRF').style.display="block";
+    document.getElementById('global_info_details_con_EAEU').style.display="none";
+    document.getElementById('global_info_details_con_WHO').style.display="none";
+    document.getElementById('global_info_details_con_ASEAN').style.display="none";
+
+
+  }
+  else if(c=="EAEU"){
+    document.getElementById('global_info_details_con_MDSAP').style.display="none";
+    document.getElementById('global_info_details_con_IMDRF').style.display="none";
+    document.getElementById('global_info_details_con_EAEU').style.display="block";
+    document.getElementById('global_info_details_con_WHO').style.display="none";
+    document.getElementById('global_info_details_con_ASEAN').style.display="none";
+
+
+  }
+  else if(c=="WHO"){
+    document.getElementById('global_info_details_con_MDSAP').style.display="none";
+    document.getElementById('global_info_details_con_IMDRF').style.display="none";
+    document.getElementById('global_info_details_con_EAEU').style.display="none";
+    document.getElementById('global_info_details_con_WHO').style.display="block";
+    document.getElementById('global_info_details_con_ASEAN').style.display="none";
+
+
+  }
+  else if(c=="ASEAN"){
+    document.getElementById('global_info_details_con_MDSAP').style.display="none";
+    document.getElementById('global_info_details_con_IMDRF').style.display="none";
+    document.getElementById('global_info_details_con_EAEU').style.display="none";
+    document.getElementById('global_info_details_con_WHO').style.display="none";
+    document.getElementById('global_info_details_con_ASEAN').style.display="block";
+
+
+  }
+
+  }
+ 
+}
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+<script src="../js/fetchinfo.js"></script>
+<script>fetchdatasecondary()</script>
+<script>
+    function zoom() {
+            document.body.style.zoom = "90%" 
+    }
+    zoom();
+</script>
+</html>
